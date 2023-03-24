@@ -1,1 +1,1 @@
-export const BACKEND_URI = 'https://backendgcp-pewzp22whq-uc.a.run.app/';
+export const BACKEND_URI = 'http://backendgcp-pewzp22whq-uc.a.run.app/';
