@@ -1,4 +1,3 @@
-
 {
   "steps": [
      {
@@ -28,6 +27,5 @@
       ]
    }
   ],
-  "images": ["gcr.io/todoapp-340315/todoappfrontend:$COMMIT_SHA"]
+  "images": ["gcr.io/todoapp-340315/frontendgcp:$COMMIT_SHA"]
 }
-
