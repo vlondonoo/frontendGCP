@@ -1,3 +1,4 @@
+
 {
   "steps": [
      {
@@ -5,14 +6,14 @@
         "args": [
            "build",
            "-t",
-           "gcr.io/todoapp-340315/frontendgcp:$COMMIT_SHA", "."
+           "gcr.io/PROJECT-NAME/IMAGE-NAME", "."
         ]
      },
      {
       "name": "gcr.io/cloud-builders/docker",
       "args": [
          "push",
-         "gcr.io/todoapp-340315/frontendgcp:$COMMIT_SHA"
+         "gcr.io/PROJECT-NAME/IMAGE-NAME"
       ]
    },
    {
@@ -20,12 +21,13 @@
       "args": [
          "run",
          "deploy",
-         "frontendgcp",
+         "SERVICE-NAME",
           "--image",
-          "gcr.io/todoapp-340315/frontendgcp:$COMMIT_SHA",
+          "gcr.io/PROJECT-NAME/IMAGE-NAME",
            "--region", "us-central1", "--platform", "managed", "--allow-unauthenticated"
       ]
    }
   ],
-  "images": ["gcr.io/todoapp-340315/frontendgcp:$COMMIT_SHA"]
+  "images": ["gcr.io/PROJECT-NAME/IMAGE-NAME"]
 }
+
